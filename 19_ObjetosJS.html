@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 19. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 19. Objetos en JS, valores complejos (complex values)
+*  En JS, valores complejos son almacenados y manipulados por referencia
+   En valores complejos no interesa el contenido, interesa la referencia, direccion de memoria donde esta almacenados
+*/
+
+var objectFoo = { same: 'same' };
+var objectBar = { same: 'same' };
+
+// Es false, JS no le importa si son identicas en contenido y si es del mismo objeto. Tienen referencia de memoria diferentes
+
+console.log(objectFoo === objectBar);
+
+// Verdadero, cuando se clona siempre apuntara a la misma referencia de memoria
+
+var objectA = { foo: 'bar' };
+var objectB = objectA;
+
+console.log(objectA === objectB); // Verdad, hace referencia al mismo objeto
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 26. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 26. Objetos en JS
+   Por medio de instanceof podemos comprobar si una variable es una instancia de un objeto
+*/
+
+// Creamos un objeto constructor personalizado
+var CustomConstructor = function () { this.foo = 'bar'; };
+
+// Realizando la instancia del objeto
+var instanceOfCustomObject = new CustomConstructor();
+
+//Verifica si es una instancia del objeto
+console.log(instanceOfCustomObject instanceof CustomConstructor); // Logs true.
+
+// En objetos nativos, tambien podemos comprobar si es una instancia del objeto
+console.log(new Array('foo') instanceof Array) // Logs true.
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

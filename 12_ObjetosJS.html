@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 12. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 12. Objetos en JS, valores primitivos
+*  Los valores primitivos en JS son inmutables, cambiados o alterados (string, number, boolean, undefined, null)
+   Un numero es un numero (number is a number)
+   Un string es un string  
+   Un boolean puede ser true o false
+   Un undefined es undefined
+   Un null es un null
+*/
+
+myString = 'string'
+myNumber = 10;
+myBoolean = false; 
+myNull = null;
+myUndefined = undefined;
+
+//Imprimiendo en consola tenemos como resultado: string 10 false null undefined
+console.log(myString, myNumber, myBoolean, myNull, myUndefined);
+
+//Un objeto colecciona datos de tipo primitivo
+var myObject = {
+	myString: 'string',
+	myNumber: 10,
+	myBoolean: false,
+	myNull: null,
+	myUndefined: undefined
+};
+
+console.log(myObject);
+
+//Un array puede almacenar multiples datos de tipo primitivo
+var myArray = ['string', 10, false, null, undefined];
+
+console.log(myArray);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 18. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 18. Objetos en JS, valores complejos (complex values)
+*  En JS, valores complejos son almacenados y manipulados por referencia
+   
+   Los valores de las variables de valores complejos son almacenadas en memoria con una direccion.
+   Al hacer referencia a ese valor que esta en dicha variable compleja estas usando su nombre
+
+   nombre_variable_objeto.variable
+
+*/
+
+var myObject = {};
+
+var copyOfMyObject = myObject; //No se copia por el valor, se copia la referencia
+
+myObject.foo = 'bar'; // Se manipula el valor almacenado en myObject
+
+/* 
+Al mostrar el log, myObject y copyOfMyObject tendran una propiedad llamada foo por que hacen referencia al mismo objeto
+*/
+
+console.log(myObject, copyOfMyObject); // Logs 'Object { foo="bar"} Object { foo="bar"}'
+
+/* Si modifico el valor de foo en copyOfMyObject, este afecta tambien a myObject */
+copyOfMyObject.foo = 'man';
+
+console.log(myObject.foo, copyOfMyObject.foo); // Logs 'Object { foo="man"} Object { foo="man"}'
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

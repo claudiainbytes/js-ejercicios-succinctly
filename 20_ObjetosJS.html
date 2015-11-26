@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 20. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 20. Objetos en JS, valores complejos (complex values)
+*  Objetos complejos tienen propiedades dinamicas
+*/
+
+//Declaramos un objeto y lo clonamos, que haga referencia al objeto
+var objA = { property: 'value' }; //Establecemos una propiedad tipo String 
+var pointer1 = objA;
+var pointer2 = pointer1;
+
+// Actualizando la propiedad del Objeto, todas sus referencias serán actualizadas
+objA.property = null;
+
+// Imprime 'null null null' por que objA, pointer1, y pointer2 estan referenciados al mismo objeto
+console.log(objA.property, pointer1.property, pointer2.property);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

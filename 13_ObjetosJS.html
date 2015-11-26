@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 13. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 13. Objetos en JS, valores primitivos
+*  Valores primitivos no son objetos
+*/
+
+// Los valores primitivos no son objetos.
+// Note que aqui no se implementa la palabra new
+
+var primitiveString1 = "foo";
+var primitiveString2 = String('foo');
+var primitiveNumber1 = 10;
+var primitiveNumber2 = Number('10');
+var primitiveBoolean1 = true;
+var primitiveBoolean2 = Boolean('true');
+var primitiveNull = null;
+var primitiveUndefined = undefined;
+
+// Imprimimos en console.log que el typeof no es un objeto sino un valor primitivo
+console.log(typeof primitiveString1, typeof primitiveString2); // Imprime 'string,string'.
+console.log(typeof primitiveNumber1, typeof primitiveNumber2); // Imprime 'number,number'.
+console.log(typeof primitiveBoolean1, typeof primitiveBoolean2); // Imprime 'boolean, boolean'.
+console.log(typeof primitiveNull); //Imprime null
+console.log(typeof primitiveUndefined);//Imprime undefined
+
+// Invocando la funcion constructora por medio de la palabra reservada new para crear objetos
+
+var myNumber = new Number(23);
+var myString = new String('male');
+var myBoolean = new Boolean(false);
+var myObject = new Object();
+var myArray = new Array('foo', 'bar');
+var myFunction = new Function("x", "y", "return x * y");
+var myDate = new Date();
+var myRegExp = new RegExp('\\bt[a-z]+\\b');
+var myError = new Error('Darn!');
+
+// Imprime 'object object object object object function object function object'.
+console.log( typeof myNumber, typeof myString, typeof myBoolean, typeof myObject, typeof myArray, typeof myFunction,
+typeof myDate, typeof myRegExp, typeof myError);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

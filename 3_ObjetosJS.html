@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 3. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 3. Objetos en JS
+*  Object() es una funcion constructora que permite construir objetos
+*  Cada vez que lo instancio, produce un objeto vacio
+*
+*  String() es una funcion constructora que trata cadenas de caracteres	
+*  
+*  Objetos en Javascript tienen propiedades y metodos, heredan y tambien 
+*  son generadas por su metodo constructor 
+*/
+
+//Creamos una nueva instancia
+var unObjeto = new Object();
+
+//Tratemos el objeto como un arreglo. Cada elemento tiene una letra.
+unObjeto['0'] = 'S';
+unObjeto['1'] = 'o';
+unObjeto['2'] = 'l';
+
+//Mostramos el contenido del objeto unObjeto
+document.write(JSON.stringify(unObjeto));
+
+//Salto de linea
+document.write("</br>");
+
+//Creamos un objeto String()
+var miCadena = new String("Luna"); 
+
+//Imprimiendo, saldra como una variable string normal
+document.write(miCadena);
+
+document.write("</br>");
+
+//Mostramos el contenido del objeto miCadena entre comillas
+document.write(JSON.stringify(miCadena));
+
+document.write("</br>");
+
+//Imprime una variable tipo de dato string
+var miOtraCadena = "Sol";
+
+//Imprimiendo miOtraCadena
+document.write(miOtraCadena);
+
+//En Javascript cualquier cosa puede ser un objeto.
+//Ej. asi haya el tipo de datos string como valor primitivo en Javascript, podemos usar el objeto String para 
+//crear instancias de tipo string. 
+//Si tenemos:
+
+document.write("</br>");
+
+//Creamos un objeto String() almacenando un tipo de dato numerico
+var miCadenaN = new String(0.0125); 
+
+//Imprimiendo, saldra como una variable string normal
+document.write(miCadenaN);
+
+document.write("</br>");
+
+//Mostramos el contenido del objeto miCadenaN entre comillas
+document.write(JSON.stringify(miCadenaN));
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

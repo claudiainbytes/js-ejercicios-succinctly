@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 2. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 2. Objetos en JS
+*  Objetos no solo coleccionan propiedades, sino hacen algo, tienen metodos.
+*  Un metodo es una funcion del objeto para que haga algo.
+*  metodo : function () {}
+*
+*/
+
+//Creamos una nueva instancia
+var casa = new Object();
+
+//Creamos propiedades y asignamos valores
+casa.barrio = "Palermo";
+casa.estrato = 4;
+casa.tipo = "Apartamento";
+casa.direccion = "Avenida Siempreviva";
+casa.estado = "En Venta"; 
+
+//Mostramos al objeto casa con sus propiedades iniciales
+document.write(JSON.stringify(casa));
+
+//Creamos un metodo para casa. Usando la palabra reservada this, hace referencia al objeto, permitiendo acceder a sus propiedades
+casa.setEstado = function(estado){
+	this.estado = estado;
+}
+
+//Creamos otro metodo para que nos muestre el valor de la propiedad tipo
+casa.getTipo = function(){
+	return this.tipo;
+}
+
+//Ahora cambiamos el valor de propiedade estado usando el metodo setEstado
+casa.setEstado("En Arriendo");
+
+//Mostramos al objeto casa con sus propiedad estado modificada por el metodo setEstado
+document.write(JSON.stringify(casa));
+
+document.write("</br>");
+
+//Mostramos el tipo de casa
+document.write(casa.getTipo());
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

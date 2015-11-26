@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 25. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 25. Objetos en JS
+   Por medio de la propiedad constructor podemos saber el tipo de funcion constructora al que pertenece una instancia
+*/
+
+//Creamos una funcion constructora llamada Custom Constructor
+var CustomConstructor = function CustomConstructor() { 
+								return 'Wow!'; 
+						};
+
+//Creamos la instancia de CustomConstructor
+var instanceOfCustomObject = new CustomConstructor();
+
+// Comparando el constructor de la instancia con el tipo de constructor personalizado, retorna true
+console.log(instanceOfCustomObject.constructor === CustomConstructor);
+
+// Retorna la referencia de CustomConstructor()
+console.log(instanceOfCustomObject.constructor);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

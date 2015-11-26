@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 8. Objetos en JS, objetos nativos de JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 8. Objetos en JS, objetos nativos de JS
+*
+*  Son llamados tambien objetos globales, no confundir con las de nivel mas alto del scope(alcance) como son los
+*  objetos del browser
+*  
+*  Son objetos nativos de JS:
+* 	- String();
+* 	- Array();
+* 	- Object();
+*	- Number();
+*	- Error();
+*	- Boolean();
+*	- Function();
+*	- Date();
+*	- RegExp();
+*
+*  Para instanciar un objeto nativo o no nativo de JS se utiliza la palabra reservada new
+*  Las funciones constructoras son objetos creados por el objeto Function()
+*  
+*  Funcion Math()
+*  Es una funcion rarisima de JS. Es un objeto estatico mas que una funcion constructora.
+*  Es un objeto que contiene funciones matematicas. 
+*/
+
+//Instanciamos objeto String
+document.write("Objeto de tipo String</br>");
+var miString = new String("Hola Mundo!");
+document.write(typeof miString);
+document.write("</br>");
+document.write(JSON.stringify(miString));
+document.write("</br>");
+document.write(miString.constructor);
+document.write("</br></br>");
+
+//Instanciamos objeto Number
+document.write("Objeto de tipo Number</br>");
+var miNumber = new Number(10.5);
+document.write(typeof miNumber);
+document.write("</br>");
+document.write(JSON.stringify(miNumber));
+document.write("</br>");
+document.write(miNumber.constructor);
+document.write("</br></br>");
+
+//Instanciamos objeto Boolean
+document.write("Objeto de tipo Boolean</br>");
+var miBoolean = new Boolean(false);
+document.write(typeof miBoolean);
+document.write("</br>");
+document.write(JSON.stringify(miBoolean));
+document.write("</br>");
+document.write(miBoolean.constructor);
+document.write("</br></br>");
+
+//Instanciamos objeto Date
+document.write("Objeto de tipo Date</br>");
+var deLoreanDate = new Date(1985,09,21);
+document.write(typeof deLoreanDate);
+document.write("</br>");
+document.write(JSON.stringify(deLoreanDate));
+document.write("</br>");
+document.write(deLoreanDate.constructor);
+document.write("</br>");
+document.write(deLoreanDate.toUTCString());
+document.write("</br>");
+document.write("</br></br>");
+
+//Instanciamos objeto Array
+document.write("Objeto de tipo Array</br>");
+var miArray = new Array("naranja","limon","toronja");
+document.write(typeof miArray);
+document.write("</br>");
+document.write(JSON.stringify(miArray));
+document.write("</br>");
+document.write(miArray.constructor);
+document.write("</br></br>");
+
+//Instanciamos objeto Object
+document.write("Objeto de tipo Object</br>");
+var miObject = new Object();
+document.write(typeof miObject);
+document.write("</br>");
+document.write(JSON.stringify(miObject));
+document.write("</br>");
+document.write(miObject.constructor);
+document.write("</br></br>");
+
+//Instanciamos objeto Error
+document.write("Objeto de tipo Error</br>");
+var err = new Error("Error del sistema");
+document.write(typeof err);
+document.write("</br>");
+document.write(JSON.stringify(err));
+document.write("</br>");
+document.write(err.message);
+document.write("</br>");
+document.write(err.constructor);
+document.write("</br></br>");
+
+//Objeto Math es estatico, no se instancia
+document.write("Objeto estatico Math </br>");
+document.write(typeof Math);
+document.write("</br>");
+document.write(JSON.stringify(Math));
+document.write("</br>");
+document.write(Math.constructor);
+document.write("</br>");
+document.write(Math.random()); 
+document.write("</br></br>"); 
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

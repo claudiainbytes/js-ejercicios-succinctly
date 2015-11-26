@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 11. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 11. Objetos en JS
+*  Creando acceso directos(shortcuts) o valores literales desde constructores
+*  Aqui se repite el concepto de JS puede tratar cualquier cosa como objeto
+*/
+
+//Usando valores literales en objetos de tipo String(), Number(), Boolean()
+//no seran tratados como objetos, sino como valores primitivos
+
+var myNumber = new Number(23); // An object.
+var myNumberLiteral = 23; // Primitive number value, not an object.
+
+var myString = new String('male'); // An object.
+var myStringLiteral = 'male'; // Primitive string value, not an object.
+
+var myBoolean = new Boolean(false); // An object.
+var myBooleanLiteral = false; // Primitive boolean value, not an object.
+
+console.log(myNumber.constructor, myNumberLiteral.constructor);
+console.log(myString.constructor, myStringLiteral.constructor);
+console.log(myBoolean.constructor, myBooleanLiteral.constructor);
+
+//Shortcut para instancia Object() es {}
+var myObject = new Object();
+var myObjectLiteral = {};
+
+//Shortcut para instancia Function()
+//En Function() los primeros elementos son parametros de la funcion, 
+//el ultimo es el procedimiento de la funcion
+var myFunction = new Function("x", "y", "return x*y"); 
+var myFunctionLiteral = function (x, y) { return x * y }; //La que usualmente usamos
+
+//Shorcut para Array() es []
+var myArray = new Array('foo', 'bar');
+var myArrayLiteral = ['foo', 'bar'];
+
+//Shorcut para expresiones regulares son las barras diagonales / /
+var myRegExp = new RegExp('\bt[a-z]+\b');
+var myRegExpLiteral = /\bt[a-z]+\b/;
+
+console.log(myObject.constructor, myObjectLiteral.constructor);
+console.log(myArray.constructor, myArrayLiteral.constructor);
+console.log(myFunction.constructor, myFunctionLiteral.constructor);
+console.log(myRegExp.constructor, myRegExpLiteral.constructor);
+
+//La salida será
+//Number() Number()
+//String() String()
+//Boolean() Boolean()
+//Object() Object()
+//Array() Array()
+//Function() Function()
+//RegExp() RegExp()
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

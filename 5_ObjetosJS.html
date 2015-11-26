@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 5. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 5. Objetos en JS
+*  Creamos un objeto persona1 a partir de una funcion constructora personalizada Persona() y otro objeto persona2 a 
+*  partir del constructor Object()
+*  
+*  La constructora Persona() por ser no nativa de JS es mas robusta y estructurada 
+*  Tambien permite configurar herencia de prototipos para ser usadas en instancias de objeto Persona()  
+*/
+
+//Definimos la funcion constructora Persona para luego crear objetos
+
+var Persona = function(nombre, estaviva, edad, genero) {
+	this.nombre = nombre
+	this.estaviva = estaviva,
+	this.edad = edad,
+	this.genero = genero,
+	this.getNombre = function(){
+		return this.nombre;
+	},
+	this.getEstaviva = function(){
+		return this.estaviva;
+	},
+	this.setEstaViva = function(estaviva){
+		this.estaviva = estaviva;
+	}
+};
+
+//Creamos una instancia a partir de la funcion constructora Persona
+var persona1 = new Persona("Nacho", true, 23, "Masculino");
+
+//Imprimimos el objeto
+document.write(JSON.stringify(persona1));
+
+//Accedemos a los metodos para obtener informacion de las propiedades nombre y estaviva
+//Utilizamos signo + para concatenar variables en JS
+
+document.write("</br>Nombre de persona1: " + persona1.getNombre() + ", estaviva: " + persona1.getEstaviva() );
+
+//Modificamos la propiedad estaviva a false. Es decir matemos a persona1
+persona1.setEstaViva(false);
+
+document.write("</br>Nombre de persona1: " + persona1.getNombre() + ", estaviva: " + persona1.getEstaviva() + "</br>");
+
+//Creamos un objeto persona2 a partir del objeto constructor Object()
+persona2 = new Object();
+
+//Creamos propiedades para el objeto y le asignamos su valor similar a persona1
+persona2.nombre = "Martha";
+persona2.estaviva = true;
+persona2.edad = 45;
+persona2.genero = "Femenino";
+
+//Imprimimos el objeto
+document.write(JSON.stringify(persona2));
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

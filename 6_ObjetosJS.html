@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 6. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 6. Objetos en JS
+*  Las funciones constructoras son las plantillas que permitiran la instanciacion, creacion de nuevos objetos.
+*/
+
+//Definimos la funcion constructora Persona para luego crear objetos
+
+var Persona = function(estaviva, edad, genero) {
+	this.estaviva = estaviva,
+	this.edad = edad,
+	this.genero = genero,
+	this.getGenero = function(){
+		return this.genero;
+	}
+};
+
+//Creamos una instancia a partir de la funcion constructora Persona
+//pedrito es el objecto instanciado de Persona
+var  pedrito = new Persona(true, 10, "Masculino");
+
+//Muestra propiedades con sus valores del objeto
+document.write(JSON.stringify(pedrito));
+
+document.write("</br>");
+
+//Imprimimos el typeof de la instancia pedrito
+//Muestra el tipo de variable que es, es un objeto  
+document.write(typeof pedrito);
+
+document.write("</br>");
+
+//Muestra la estructura de la funcion constructora Persona()
+document.write(pedrito.constructor);
+
+document.write("</br>");
+
+//Accediendo a una propiedad
+document.write("Edad de Pedrito: "+ pedrito.edad );
+
+document.write("</br>");
+
+//Obteniendo genero de Pedrito
+document.write("Género de Pedrito: "+ pedrito.genero );
+
+document.write("</br>");
+
+//Obteniendo genero de Pedrito
+document.write("Género de Pedrito: "+ pedrito.getGenero() );
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

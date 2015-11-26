@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 15. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 15. Objetos en JS, valores primitivos
+*  Comparando valores primitivos con objetos Numericos
+*/
+
+var price1 = 10;
+var price2 = 10;
+var price3 = new Number('10'); // Es un objeto Numerico, no un valor primitivo
+var price4 = price3;
+
+console.log(price1 === price2); // Devuelve true. 10 === 10
+
+/* Devuelve falso porque price3 es un objeto Numerico y price1 es un valor primitivo */
+console.log(price1 === price3);
+
+// Devuelve true porque esta comparando dos objetos Numericos, son iguales por su referencia más no por su valor
+console.log(price4 === price3);
+
+// Que pasa si actualizamos price4 que es un objeto Numerico a un valor primitivo?
+price4 = 10;
+console.log(price4 === price3); // Retorna false. price4 es un valor primitivo al compararlo con price3 que es un objeto da error
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

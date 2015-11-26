@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 22. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 22. Objetos en JS
+   Propiedades dinamicas de los objetos complejos	
+   Algunos objetos nativos y definidos por los usuarios pueden mutar.
+   Es posible añadir propiedades y metodos en funciones constructoras de origen nativo por medio de prototype
+   Hay que tener cuidado en las modificacions de metodos y propiedades de objetos nativos de JS. Puede que tengas 
+   una versión personalizada de JS, cuando JS tenga nuevas actualizaciones, pueden haber incompatibilidades.
+*/
+
+// Adicionamos una propiedad de tipo array vacio  que se integra al constructor String 
+String.augmentedProperties = [];
+
+//Si el prototipo del constructor String no tiene el metodo trimIT se lo adicionamos
+if (!String.prototype.trimIT) { 
+	
+	String.prototype.trimIT = function () {
+		return this.replace(/^\s+|\s+$/g, '');
+	}
+
+// Adicionamos el metodo trimIT a la propiedad augmentedProperties
+//.push() adiciona el elemento en un array
+	String.augmentedProperties.push('trimIT');
+}
+
+//creamos una variable string
+var myString = ' quitame espacios en blanco sobrantes de esta oración ';
+console.log(myString); 
+
+//En el log nuestro metodo personalizado myString.trimIT() quitara espacios en blanco sobrantes
+console.log(myString.trimIT()); 
+
+//En el array augmentedProperties vemos la vinculacion del metodo a la propiedad
+console.log(String.augmentedProperties.join()); // Muestra trimIT
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

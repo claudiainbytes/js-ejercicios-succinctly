@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 16. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 16. Objetos en JS, valores primitivos
+*  Valores primitivos String, Number y Boolean actuan como objetos cuando son usados como objetos
+*/
+
+//Valor primitivo undefined
+//undefined quiere decir que la variable ha sido declarada pero que aun no tiene un valor asignado. 
+
+//Valor primitivo null
+//null es un valor asignado. Puede ser asignado a la variable como representacion de que no tiene valor.
+
+Undefined en si es un tipo en si mismo mientras que null es un objeto.
+
+// Produce valores primitvos
+var myNull = null;
+var myUndefined = undefined;
+var primitiveString1 = "foo";
+var primitiveString2 = String('foo'); //Cuando no se usa new, indica que es un valor primitivo
+var primitiveNumber1 = 10;
+var primitiveNumber2 = Number('10'); //Cuando no se usa new, indica que es un valor primitivo
+var primitiveBoolean1 = true;
+var primitiveBoolean2 = Boolean('true'); //Cuando no se usa new, indica que es un valor primitivo
+
+/*Al acceder al metodo toString() heredado por objetos del object.prototype, demuestra que el valor primitivo es convertido al objeto cuando es tratado como objeto*/
+
+// imprime "string string"
+console.log(primitiveString1.toString(), primitiveString2.toString());
+
+// imprime "number number"
+console.log(primitiveNumber1.toString(), primitiveNumber2.toString());
+
+// imprime "boolean boolean"
+console.log(primitiveBoolean1.toString(), primitiveBoolean2.toString());
+
+/* Valores null y undefined al ser convertidos a objeto String generará un error por que no tiene funcion constructora y no se mostrará en consola. */
+
+//TypeError: myNull is null
+console.log(myNull.toString());
+
+//TypeError: myUndefined is undefined
+console.log(myUndefined.toString());
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

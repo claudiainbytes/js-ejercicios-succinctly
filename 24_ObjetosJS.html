@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 24. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 24. Objetos en JS
+   Por medio de la propiedad constructor podemos saber el tipo de funcion constructora al que pertenece una instancia
+*/
+
+var myNumber = new Number('23');
+var myNumberL = 23; // Literal shorthand.
+
+var myString = new String('male');
+var myStringL = 'male'; // Literal shorthand.
+
+var myBoolean = new Boolean('true');
+var myBooleanL = true; // Literal shorthand.
+
+var myObject = new Object();
+var myObjectL = {}; // Literal shorthand.
+
+var myArray = new Array();
+var myArrayL = []; // Literal shorthand.
+
+var myFunction = new Function();
+var myFunctionL = function () { }; // Literal shorthand.
+
+var myDate = new Date();
+
+var myRegExp = new RegExp('/./');
+var myRegExpL = /./; // Literal shorthand.
+
+var myError = new Error();
+
+console.log( // All of these return true.
+		myNumber.constructor === Number,
+		myNumberL.constructor === Number,
+		myString.constructor === String,
+		myStringL.constructor === String,
+		myBoolean.constructor === Boolean,
+		myBooleanL.constructor === Boolean,
+		myObject.constructor === Object,
+		myObjectL.constructor === Object,
+		myArray.constructor === Array,
+		myArrayL.constructor === Array,
+		myFunction.constructor === Function,
+		myFunctionL.constructor === Function,
+		myDate.constructor === Date,
+		myRegExp.constructor === RegExp,
+		myRegExpL.constructor === RegExp,
+		myError.constructor === Error
+);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

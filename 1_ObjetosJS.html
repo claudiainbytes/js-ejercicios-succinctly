@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 1. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 1. Objetos en JS
+*  Un objeto es un contenedor que colecciona valores (aka propiedades)
+*  Propiedad : 'Valor Propiedad'
+*
+*/
+
+//Creamos una nueva instancia
+var casa = new Object();
+
+//Creamos propiedades y asignamos valores
+casa.barrio = "Palermo";
+casa.estrato = 4;
+casa.tipo = "Apartamento";
+casa.direccion = "Avenida Siempreviva"; 
+
+//Usamos console.log para imprimir el mensaje en la consola web
+console.log(casa);
+
+//Usamos JSON.stringify() para convertir el objeto en una cadena
+//Document.write() permite imprimir una variable en pantalla
+document.write(JSON.stringify(casa));
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

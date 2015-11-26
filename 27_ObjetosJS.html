@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>JS Succintly - Ejercicio 27. Objetos en JS</title>
+<script>
+/* 
+*  JS Succinctly
+*  Ejercicio 27. Objetos en JS
+	Una instancia creada desde un constructor puede tener sus  propiedades independientes, 
+	es decir, propiedades de instancia.
+	En JS, los objetos pueden ser incrementados en cualquier momento (como las propiedades dinamicas).
+	Como en JS los objetos son mutables, los objetos creados desde una funcion constructora pueden ser incrementados 
+	por medio de sus propiedades.
+
+	El ejemplo muestra una instancia del objeto Array() y podemos adicionarle una nueva propiedad
+	Esto podría hacerse con Object () , RegExp (), o cualquiera de los otros constructores no primitivos - incluso Boolean ().
+*/
+
+var myArray = new Array();
+
+myArray.prop = 'test';
+
+console.log(myArray.prop) // Logs 'test'.
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
